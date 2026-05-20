@@ -1,0 +1,963 @@
+/* =========================
+   RESET
+========================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+  overflow-x:hidden;
+}
+
+body{
+  overflow-x:hidden;
+
+  font-family:'Montserrat',sans-serif;
+
+  background:
+  linear-gradient(
+    rgba(0,0,0,.65),
+    rgba(0,0,0,.7)
+  ),
+  url('assets/img/bg.jpg');
+
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+}
+
+/* =========================
+   DESKTOP MOBILE VIEW
+========================= */
+
+.desktopWrap{
+  width:100%;
+
+  min-height:100vh;
+
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+
+  padding:20px;
+}
+
+/* WEBSITE */
+
+.website{
+  position:relative;
+
+  width:100%;
+  max-width:430px;
+  min-height:100vh;
+
+  background:#f7f4ef;
+
+  overflow:hidden;
+
+  border-radius:28px;
+
+  box-shadow:
+  0 0 50px rgba(0,0,0,.35);
+}
+
+.opening,
+.hero,
+.quote,
+.couple,
+.gallery,
+.rsvp,
+.countdown{
+  position:relative;
+}
+
+/* =========================
+   OPENING
+========================= */
+
+.opening{
+  position:relative;
+
+  width:100%;
+  min-height:100vh;
+
+  overflow:hidden;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+
+  padding:30px;
+
+  background:
+  linear-gradient(
+    rgba(20,18,16,.58),
+    rgba(20,18,16,.65)
+  ),
+  url('assets/img/bg.jpg');
+
+  background-size:cover;
+  background-position:center;
+}
+
+/* =========================
+   OVERLAY
+========================= */
+
+.overlay{
+  position:absolute;
+  inset:0;
+
+  background:
+  radial-gradient(
+    circle at center,
+    rgba(255,255,255,.03),
+    rgba(0,0,0,.15)
+  );
+}
+
+/* =========================
+   OPENING CONTENT
+========================= */
+
+.openingContent{
+  position:relative;
+  z-index:5;
+
+  width:100%;
+  max-width:500px;
+}
+
+.inviteText{
+  color:white;
+
+  font-size:14px;
+  letter-spacing:7px;
+
+  margin-bottom:22px;
+
+  font-weight:300;
+}
+
+.coupleName{
+  font-family:'Great Vibes',cursive;
+
+  font-size:78px;
+  line-height:1.1;
+
+  color:#d4af37;
+
+  text-shadow:
+  0 0 10px rgba(212,175,55,.18);
+
+  font-weight:400;
+}
+
+.date{
+  margin-top:25px;
+
+  color:white;
+
+  letter-spacing:8px;
+
+  font-size:15px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+#openBtn{
+  margin-top:45px;
+
+  border:none;
+  outline:none;
+
+  padding:17px 42px;
+
+  border-radius:999px;
+
+  background:
+  linear-gradient(
+    135deg,
+    #e0c15a,
+    #cfa52b
+  );
+
+  color:white;
+
+  font-size:16px;
+  font-weight:500;
+
+  cursor:pointer;
+
+  box-shadow:
+  0 8px 30px rgba(212,175,55,.22);
+
+  transition:.35s;
+}
+
+#openBtn:hover{
+  transform:translateY(-4px);
+
+  box-shadow:
+  0 12px 35px rgba(212,175,55,.28);
+}
+
+/* =========================
+   ORNAMENT
+========================= */
+
+.orn{
+  position:absolute;
+
+  width:400px;
+
+  pointer-events:none;
+
+  opacity:.95;
+
+  will-change:transform;
+
+  filter:
+  drop-shadow(
+    0 0 10px rgba(212,175,55,.38)
+  );
+
+  animation:
+  floatOrn 6s ease-in-out infinite;
+}
+
+/* TOP */
+
+.topOrn{
+  top:-20px;
+  left:-20px;
+}
+
+/* BOTTOM */
+
+.bottomOrn{
+  bottom:-20px;
+  right:-20px;
+
+
+}
+
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  position:relative;
+
+  padding:120px 20px 100px;
+
+  text-align:center;
+
+  overflow:hidden;
+}
+
+/* =========================
+   HERO FRAME
+========================= */
+
+.heroFrame{
+  position:relative;
+
+  width:280px;
+  height:280px;
+
+  margin:auto;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+/* GLOW */
+
+.heroGlow{
+  position:absolute;
+
+  width:115%;
+  height:115%;
+
+  border-radius:50%;
+
+  background:
+  radial-gradient(
+    rgba(212,175,55,.16),
+    transparent 70%
+  );
+
+  animation:
+  glowPulse 4s ease-in-out infinite;
+}
+
+/* IMAGE */
+
+.heroImage{
+  position:relative;
+  z-index:2;
+
+  width:240px;
+  height:240px;
+
+  border-radius:50%;
+
+  background:
+  url('assets/img/couple.jpg');
+
+  background-size:cover;
+  background-position:center;
+
+  border:4px solid rgba(212,175,55,.9);
+
+  box-shadow:
+  0 0 0 10px rgba(212,175,55,.08),
+  0 0 30px rgba(212,175,55,.22);
+  z-index: 3;
+}
+
+
+
+
+/* =========================
+   HERO ORNAMENT
+========================= */
+
+.heroOrn{
+  position:absolute;
+
+  width:250px;
+
+  opacity:.92;
+
+  pointer-events:none;
+
+  z-index:5;
+
+  filter:
+  drop-shadow(
+    0 0 8px rgba(212,175,55,.28)
+  );
+}
+
+/* TOP */
+
+.heroOrnTop{
+  top:100px;
+  left:50%;
+
+  transform:
+  translateX(-49%);
+}
+
+/* BOTTOM */
+
+.heroOrnBottom{
+  top: 310px;
+  left:50%;
+
+  transform:
+  translateX(-51%)
+  
+  
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.miniTitle{
+  margin-top:40px;
+
+  letter-spacing:4px;
+
+  color:#8f7856;
+
+  font-size:13px;
+}
+
+.heroContent h2{
+  margin-top:16px;
+
+  font-size:62px;
+
+  color:#D4AF37;
+
+  font-family:'Great Vibes',cursive;
+
+  font-weight:400;
+
+  text-shadow:
+  0 0 10px rgba(212,175,55,.15);
+}
+
+.heroDesc{
+  margin-top:12px;
+
+  line-height:1.8;
+
+  color:#5f5247;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes glowPulse{
+
+  0%,100%{
+    transform:scale(1);
+    opacity:.6;
+  }
+
+  50%{
+    transform:scale(1.08);
+    opacity:1;
+  }
+
+}
+
+/* =========================
+   QUOTE
+========================= */
+
+.quote{
+  padding:100px 30px;
+
+  text-align:center;
+
+  background:#f3ede4;
+}
+
+.line{
+  width:90px;
+  height:2px;
+
+  margin:auto auto 35px;
+
+  background:#d4af37;
+}
+
+.quote p{
+  max-width:700px;
+
+  margin:auto;
+
+  line-height:1.9;
+
+  font-size:22px;
+
+  font-family:'Cormorant Garamond',serif;
+
+  color:#3a3029;
+}
+
+.quote span{
+  display:block;
+
+  margin-top:25px;
+
+  color:#b08b38;
+
+  letter-spacing:3px;
+}
+
+/* =========================
+   COUPLE
+========================= */
+
+.couple{
+  padding:110px 20px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  flex-wrap:wrap;
+
+  gap:45px;
+}
+
+.card{
+  width:280px;
+
+  text-align:center;
+}
+
+.card img{
+  width:100%;
+  height:360px;
+
+  object-fit:cover;
+
+  border-radius:
+  200px
+  200px
+  25px
+  25px;
+
+  border:4px solid #d4af37;
+
+  box-shadow:
+  0 10px 35px rgba(212,175,55,.15);
+}
+
+.card h3{
+  margin-top:24px;
+
+  font-size:48px;
+
+  font-family:'Great Vibes',cursive;
+
+  color:#d4af37;
+
+  font-weight:400;
+}
+
+.card p{
+  margin-top:12px;
+
+  line-height:1.8;
+
+  color:#5c4d42;
+}
+
+.and{
+  font-size:65px;
+
+  color:#d4af37;
+
+  font-family:'Great Vibes',cursive;
+}
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+.countdown{
+  padding:110px 20px;
+
+  background:#1f1a16;
+
+  color:white;
+
+  text-align:center;
+}
+
+.countdown h2{
+  font-size:55px;
+
+  font-family:'Cormorant Garamond',serif;
+
+  font-weight:600;
+}
+
+.countBox{
+  margin-top:55px;
+
+  display:flex;
+  justify-content:center;
+
+  gap:18px;
+
+  flex-wrap:wrap;
+}
+
+.time{
+  width:120px;
+
+  padding:28px 10px;
+
+  border-radius:22px;
+
+  background:
+  rgba(255,255,255,.03);
+
+  border:
+  1px solid rgba(255,255,255,.08);
+}
+
+.time h3{
+  font-size:42px;
+
+  color:#d4af37;
+}
+
+.time span{
+  font-size:13px;
+
+  letter-spacing:2px;
+}
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery{
+  padding:110px 20px;
+}
+
+.gallery h2{
+  text-align:center;
+
+  font-size:55px;
+
+  margin-bottom:55px;
+
+  font-family:'Cormorant Garamond',serif;
+}
+
+.galleryGrid{
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(180px,1fr));
+
+  gap:15px;
+}
+
+.galleryGrid img{
+  width:100%;
+  height:300px;
+
+  object-fit:cover;
+
+  border-radius:24px;
+
+  transition:.4s;
+}
+
+.galleryGrid img:hover{
+  transform:scale(1.03);
+}
+
+/* =========================
+   RSVP
+========================= */
+
+.rsvp{
+  padding:110px 20px;
+
+  text-align:center;
+
+  background:#f3ede4;
+}
+
+.rsvp h2{
+  font-size:55px;
+
+  margin-bottom:45px;
+
+  font-family:'Cormorant Garamond',serif;
+}
+
+.rsvp input,
+.rsvp select,
+.rsvp textarea{
+  width:min(520px,100%);
+
+  margin:12px auto;
+
+  display:block;
+
+  border:none;
+  outline:none;
+
+  padding:17px;
+
+  border-radius:18px;
+
+  background:white;
+
+  font-size:15px;
+}
+
+.rsvp textarea{
+  height:140px;
+
+  resize:none;
+}
+
+.rsvp button{
+  margin-top:24px;
+
+  padding:16px 40px;
+
+  border:none;
+
+  border-radius:999px;
+
+  background:
+  linear-gradient(
+    135deg,
+    #e0c15a,
+    #cfa52b
+  );
+
+  color:white;
+
+  cursor:pointer;
+
+  font-size:15px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  padding:90px 20px;
+
+  text-align:center;
+
+  background:#1f1a16;
+
+  color:white;
+}
+
+footer h2{
+  font-size:65px;
+
+  color:#d4af37;
+
+  font-family:'Great Vibes',cursive;
+
+  font-weight:400;
+}
+
+footer p{
+  margin-top:14px;
+
+  letter-spacing:2px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+  .coupleName{
+    font-size:58px;
+  }
+
+  .heroContent h2{
+    font-size:50px;
+  }
+
+  .countdown h2,
+  .gallery h2,
+  .rsvp h2{
+    font-size:42px;
+  }
+
+  .quote p{
+    font-size:18px;
+  }
+
+  .orn{
+    width:250px;
+  }
+
+  .topOrn{
+    top:2px;
+    left:-30px;
+  }
+
+  .bottomOrn{
+    bottom:-10px;
+    right:-20px;
+  }
+
+}
+
+/* =========================
+   RING ORNAMENT
+========================= */
+
+.ringOrn{
+  position:absolute;
+
+  top:200px;
+  left:50%;
+
+  transform:translateX(-50%);
+
+  z-index:3;
+
+  opacity:.95;
+
+  animation:
+  ringReveal 2s ease forwards,
+  ringFloat 5s ease-in-out infinite;
+}
+
+.ringOrn svg{
+  width:90px;
+
+  filter:
+  drop-shadow(
+    0 0 10px rgba(212,175,55,.45)
+  );
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes ringReveal{
+
+  from{
+    opacity:0;
+
+    transform:
+    translateX(-50%)
+    translateY(-15px)
+    scale(.8);
+
+    filter:blur(8px);
+  }
+
+  to{
+    opacity:1;
+
+    transform:
+    translateX(-50%)
+    translateY(0)
+    scale(1);
+
+    filter:blur(0);
+  }
+
+}
+
+@keyframes ringFloat{
+
+  0%,100%{
+    transform:
+    translateX(-50%)
+    translateY(0);
+  }
+
+  50%{
+    transform:
+    translateX(-50%)
+    translateY(-6px);
+  }
+
+}
+
+.ringOrn::after{
+  content:"";
+
+  position:absolute;
+
+  inset:-20px;
+
+  border-radius:50%;
+
+  background:
+  radial-gradient(
+    rgba(212,175,55,.18),
+    transparent 70%
+  );
+
+  z-index:-1;
+
+  animation:
+  auraPulse 4s ease-in-out infinite;
+}
+
+@keyframes auraPulse{
+
+  0%,100%{
+    transform:scale(1);
+    opacity:.5;
+  }
+
+  50%{
+    transform:scale(1.15);
+    opacity:.9;
+  }
+
+}
+
+/* =========================
+   SCROLL REVEAL
+========================= */
+
+.reveal{
+  opacity:0;
+
+  transform:
+  translateY(80px)
+  scale(.96);
+
+  filter:blur(10px);
+
+  transition:
+  opacity 1s ease,
+  transform 1s ease,
+  filter 1s ease;
+}
+
+.reveal.active{
+  opacity:1;
+
+  transform:
+  translateY(0)
+  scale(1);
+
+  filter:blur(0);
+}
+
+
+/* =========================
+   HERO ORNAMENT
+========================= */
+
+.bord{
+  position:absolute;
+
+  width:800px;
+
+  opacity:.92;
+
+  pointer-events:none;
+
+  z-index:5;
+
+  filter:
+  drop-shadow(
+    0 0 8px rgba(212,175,55,.28)
+  );
+}
+
+/* TOP */
+
+.bord1{
+  top:415px;
+  left:50%;
+
+  transform:
+  translateX(-49%);
+}
+
+.bord2{
+  top:1105px;
+  left:50%;
+
+  transform:
+  translateX(-49%);
+}
